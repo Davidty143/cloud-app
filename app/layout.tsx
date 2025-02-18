@@ -1,7 +1,10 @@
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
+import { Inter, Lexend } from "next/font/google";
 import "./globals.css";
 import { cn } from "@/lib/utils";
+import LoginButton from "@/components/LoginLogoutButton";
+import SignupButton from "@/components/SignupButton";
+
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
@@ -16,7 +19,119 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={cn("bg-background", inter.className)}>{children}</body>
+      <body className={cn("bg-background", inter.className)}>
+        {/* Menu Header */}
+        <div
+          className={cn(
+            "menu-header",
+            "bg-blue-200",
+            "h-16",
+            "w-full",
+            "flex",
+            "items-center",
+            "justify-center"
+          )}
+        >
+          {/* Inner Div centered within the Menu */}
+          <div
+            className={cn(
+              "menu-header",
+              "bg-blue-500",
+              "h-full", // Use full height for inner div
+              "w-[80%]",
+              "flex",
+              "justify-between", // Space out the children in the flex container
+              "items-center" // Center the items vertically
+            )}
+          >
+            {/* LOGO Section */}
+            <div
+              className={cn(
+                "menu-header",
+                "bg-red-300",
+                "h-full", // Take full height of the parent
+                "w-[10%]", // Width as 10% of parent
+                "flex",
+                "items-center",
+                "justify-center"
+              )}
+            >
+              LOGO
+            </div>
+
+            {/* Login Section */}
+            <div
+              className={cn(
+                "menu-header",
+                "bg-violet-300",
+                "h-full", // Take full height of the parent
+                "w-[15%]", // Width as 10% of parent
+                "flex",
+                "items-center",
+                "justify-center"
+              )}
+            >
+              <SignupButton />
+              <LoginButton />
+            </div>
+          </div>
+        </div>
+
+        {/* Bottom Green Header */}
+        <div
+          className={cn(
+            "menu-header",
+            "bg-green-200",
+            "h-16",
+            "w-full",
+            "flex",
+            "items-center",
+            "justify-center"
+          )}
+        >
+          <div
+            className={cn(
+              "menu-header",
+              "bg-yellow-200",
+              "h-full", // Use full height for inner div
+              "w-[80%]",
+              "flex",
+              "justify-between", // Space out the children in the flex container
+              "items-center" // Center the items vertically
+            )}
+          >
+            {" "}
+            <div
+              className={cn(
+                "menu-header",
+                "bg-pink-300",
+                "h-full", // Take full height of the parent
+                "w-[40%]", // Width as 10% of parent
+                "flex",
+                "items-center",
+                "justify-center"
+              )}
+            >
+              DROP DOWN MENU
+            </div>
+            <div
+              className={cn(
+                "menu-header",
+                "bg-orange-300",
+                "h-full", // Take full height of the parent
+                "w-[20%]", // Width as 10% of parent
+                "flex",
+                "items-center",
+                "justify-center"
+              )}
+            >
+              SEARCH BAR
+            </div>
+          </div>
+        </div>
+
+        {children}
+      </body>
     </html>
   );
 }
