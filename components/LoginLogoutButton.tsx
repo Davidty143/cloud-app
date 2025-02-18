@@ -4,6 +4,7 @@ import { Button } from "./ui/button";
 import { useRouter } from "next/navigation";
 import { createClient } from "@/utils/supabase/client";
 import { signout } from "@/lib/auth-actions";
+import { AiOutlineUserAdd } from "react-icons/ai";
 
 const LoginButton = () => {
   const [user, setUser] = useState<any>(null);
@@ -37,7 +38,8 @@ const LoginButton = () => {
         router.push("/login");
       }}
     >
-      Login
+      <AiOutlineUserAdd className="text-xl mr-2" />
+      <span>Login</span>
     </Button>
   );
 };

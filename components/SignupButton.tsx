@@ -4,6 +4,7 @@ import { Button } from "./ui/button";
 import { useRouter } from "next/navigation";
 import { createClient } from "@/utils/supabase/client";
 import { signout } from "@/lib/auth-actions";
+import { MdOutlineLogin } from "react-icons/md";
 
 const LoginButton = () => {
   const [user, setUser] = useState<any>(null);
@@ -37,7 +38,8 @@ const LoginButton = () => {
         router.push("/signup");
       }}
     >
-      Register
+      <MdOutlineLogin className="text-lg mr-2" /> {/* Icon */}
+      <span>Register</span> {/* Text */}
     </Button>
   );
 };
