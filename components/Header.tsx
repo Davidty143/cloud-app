@@ -31,6 +31,7 @@ const Header = () => {
       <HeaderDropdownMenu
         menuItems={menu1}
         triggerText="Home"
+        dropdownPosition="left-[-73px]"
         triggerLink="/"
       />
 
@@ -39,6 +40,7 @@ const Header = () => {
         menuItems={menu2}
         triggerText="Forums"
         triggerLink="/forums"
+        dropdownPosition="left-[-84px]" // Custom position class
       />
 
       {/* Third Dropdown Menu with custom trigger text and main link */}
@@ -46,6 +48,7 @@ const Header = () => {
         menuItems={menu3}
         triggerText="Trending"
         triggerLink="/trending"
+        dropdownPosition="left-[-95px]" // Custom position class
       />
 
       {/* Fourth Dropdown Menu with custom trigger text and main link */}
@@ -53,6 +56,7 @@ const Header = () => {
         menuItems={menu4}
         triggerText="Latest"
         triggerLink="/latest"
+        dropdownPosition="left-[-74.014px]" // Custom position class
       />
     </header>
   );
