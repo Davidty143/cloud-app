@@ -6,10 +6,12 @@ import { createClient } from "@/utils/supabase/client";
 import { signout } from "@/lib/auth-actions";
 import { MdOutlineLogin } from "react-icons/md";
 
-const LoginButton = () => {
-  const [user, setUser] = useState<any>(null);
+const Signup = () => {
+  const [user, setUser] = useState<any>(null); // Track user state
   const router = useRouter();
   const supabase = createClient();
+
+  // Fetch user information on component mount
   useEffect(() => {
     const fetchUser = async () => {
       const {
@@ -18,19 +20,14 @@ const LoginButton = () => {
       setUser(user);
     };
     fetchUser();
-  }, []);
+  }, []); // Only run once on mount
+
+  // If user is logged in, don't show the button
   if (user) {
-    return (
-      <Button
-        onClick={() => {
-          signout();
-          setUser(null);
-        }}
-      >
-        Log out
-      </Button>
-    );
+    return null; // You can return null or another component here
   }
+
+  // If user is not logged in, show the signup button
   return (
     <Button
       variant="outline"
@@ -44,4 +41,4 @@ const LoginButton = () => {
   );
 };
 
-export default LoginButton;
+export default Signup;

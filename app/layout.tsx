@@ -2,10 +2,7 @@ import type { Metadata } from "next";
 import { Inter, Lexend } from "next/font/google";
 import "./globals.css";
 import { cn } from "@/lib/utils";
-import LoginButton from "@/components/LoginLogoutButton";
-import SignupButton from "@/components/SignupButton";
-import Header from "@/components/Header";
-import SearchBar from "@/components/SearchBar";
+import UploadButton from "@/components/UploadButton"; // Import the UploadButton component
 import "@radix-ui/themes/styles.css";
 
 const inter = Inter({ subsets: ["latin"] });
@@ -31,7 +28,7 @@ export default function RootLayout({
             <div
               className={cn(
                 "menu-header",
-                "bg-blue-200",
+                //"bg-blue-200",
                 "h-16",
                 "w-full",
                 "flex",
@@ -43,11 +40,14 @@ export default function RootLayout({
               <div
                 className={cn(
                   "menu-header",
-                  "bg-blue-500",
+                  //"bg-blue-500",
                   "h-full", // Use full height for inner div
                   "w-[1250px]",
                   "2xl:w-[80%]",
                   "flex",
+                  "border-2",
+                  "border-t-0",
+                  "border-gray-300",
                   "justify-between", // Space out the children in the flex container
                   "items-center" // Center the items vertically
                 )}
@@ -56,87 +56,31 @@ export default function RootLayout({
                 <div
                   className={cn(
                     "menu-header",
-                    "bg-red-300",
+                    //   "bg-red-300",
                     "h-full", // Take full height of the parent
                     "w-[150px]", // Width as 10% of parent
                     "flex",
+                    "font-semibold",
                     "items-center",
                     "justify-center"
                   )}
                 >
-                  LOGO
+                  Cloud Storage
                 </div>
 
                 {/* Login Section */}
                 <div
                   className={cn(
                     "menu-header",
-                    "bg-violet-300",
+                    //"bg-violet-300",
                     "h-full", // Take full height of the parent
                     "w-[300px]", // Width as 10% of parent
                     "flex",
                     "items-center",
-                    "justify-end",
+                    "justify-center",
                     "flex-shrink-0"
                   )}
-                >
-                  <SignupButton />
-                  <LoginButton />
-                </div>
-              </div>
-            </div>
-
-            {/* Bottom Green Header */}
-            <div
-              className={cn(
-                "menu-header",
-                "bg-green-200",
-                "h-16",
-                "w-full",
-                "flex",
-                "items-center",
-                "justify-center"
-              )}
-            >
-              <div
-                className={cn(
-                  "menu-header",
-                  "bg-yellow-200",
-                  "h-full", // Use full height for inner div
-                  "w-[1250px]",
-                  "2xl:w-[80%]",
-                  "flex",
-                  "justify-between", // Space out the children in the flex container
-                  "items-center" // Center the items vertically
-                )}
-              >
-                {" "}
-                <div
-                  className={cn(
-                    "menu-header",
-                    "bg-pink-300",
-                    "h-full", // Take full height of the parent
-                    "w-[200px]", // Width as 10% of parent
-                    "flex",
-                    "items-center",
-                    "justify-center"
-                  )}
-                >
-                  <Header />
-                </div>
-                <div
-                  className={cn(
-                    "menu-header",
-                    "bg-orange-300",
-                    "h-full", // Take full height of the parent
-                    "w-[300px]", // Width as 10% of parent
-                    "flex",
-                    "items-center",
-                    "justify-center"
-                  )}
-                >
-                  <SearchBar />
-                </div>
+                ></div>
               </div>
             </div>
           </div>{" "}
