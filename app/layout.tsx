@@ -2,7 +2,6 @@ import type { Metadata } from "next";
 import { Inter, Lexend } from "next/font/google";
 import "./globals.css";
 import { cn } from "@/lib/utils";
-import UploadButton from "@/components/UploadButton"; // Import the UploadButton component
 import "@radix-ui/themes/styles.css";
 
 const inter = Inter({ subsets: ["latin"] });
