@@ -58,29 +58,15 @@ export default function RootLayout({
                     "menu-header",
                     //   "bg-red-300",
                     "h-full", // Take full height of the parent
-                    "w-[150px]", // Width as 10% of parent
+                    "w-full",
                     "flex",
                     "font-semibold",
                     "items-center",
                     "justify-center"
                   )}
                 >
-                  Cloud Storage
+                  Weather App
                 </div>
-
-                {/* Login Section */}
-                <div
-                  className={cn(
-                    "menu-header",
-                    //"bg-violet-300",
-                    "h-full", // Take full height of the parent
-                    "w-[300px]", // Width as 10% of parent
-                    "flex",
-                    "items-center",
-                    "justify-center",
-                    "flex-shrink-0"
-                  )}
-                ></div>
               </div>
             </div>
           </div>{" "}
