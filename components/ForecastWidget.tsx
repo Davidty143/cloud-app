@@ -65,7 +65,7 @@ const ForecastWidget: React.FC<ForecastWidgetProps> = ({ city }) => {
   };
 
   return (
-    <div className=" w-flex-shrink-0 md:border-2 border-r-0 border-t-0 border-b-0 border-gray-300 p-5">
+    <div className=" w-flex-shrink-0 border-2 border-t-0 border-r-0 border-b-0 p-5">
       <h2 className="text-2xl font-semibold mb-4">5-Day Forecast</h2>
       <div className="space-y-4">
         {/* Forecast for the next 5 days */}
@@ -75,7 +75,7 @@ const ForecastWidget: React.FC<ForecastWidgetProps> = ({ city }) => {
             <p className="text-sm">{getDayOfWeek(item.dt_txt)}</p>
 
             {/* Display temperature and icon next to each other */}
-            <div className="flex items-end justify-start space-x-10">
+            <div className="flex items-end justify-start pr-10">
               {/* Temperature */}
               <p className="text-lg mt-3 font-semibold">{item.main.temp}°C</p>
 
@@ -83,7 +83,7 @@ const ForecastWidget: React.FC<ForecastWidgetProps> = ({ city }) => {
               <img
                 src={getWeatherIcon(item.weather[0].icon)} // Use high-resolution icon
                 alt={item.weather[0].description}
-                className=" -my-5"
+                className=" -my-5 ml-10"
                 width={60} // Icon size for the day
                 height={60}
               />

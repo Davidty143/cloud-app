@@ -46,7 +46,7 @@ export default function RootLayout({
                   "flex",
                   "border-2",
                   "border-t-0",
-                  "border-gray-300",
+                  "border-b-0",
                   "justify-between", // Space out the children in the flex container
                   "items-center" // Center the items vertically
                 )}
@@ -59,11 +59,11 @@ export default function RootLayout({
                     "h-full", // Take full height of the parent
                     "w-full",
                     "flex",
-                    "text-lg",
-                    "text-gray-700",
-                    "font-bold",
+                    "text-xl",
+                    "font-semibold",
                     "items-center",
-                    "justify-center"
+                    "justify-start",
+                    "pl-6"
                   )}
                 >
                   Weather8

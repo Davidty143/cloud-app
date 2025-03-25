@@ -116,7 +116,7 @@ const WeatherWidget: React.FC = () => {
           type="text"
           value={city}
           onChange={(e) => setCity(e.target.value)} // Update city on input change
-          className=" py-2 px-4 border-2 rounded-md border-gray-300 w-full sm:w-3/4 xl:w-6/7 h-3/4"
+          className=" py-2 px-4 border-2 rounded-md  w-full sm:w-3/4 xl:w-6/7 h-3/4"
           placeholder="Enter City"
         />
         <button
@@ -127,8 +127,8 @@ const WeatherWidget: React.FC = () => {
         </button>
       </div>
 
-      <div className="border-2 rounded-lg border-gray-300">
-        <h2 className="text-md sm:text-lg py-1 w-[120px] font-semibold m-2 text-center rounded-3xl text-white bg-black">
+      <div className="border-2 rounded-lg ">
+        <h2 className="text-sm sm:text-md py-1 w-[100px] font-semibold m-2 text-center rounded-3xl text-white bg-black">
           Today
         </h2>
 
@@ -152,7 +152,7 @@ const WeatherWidget: React.FC = () => {
 
             <p className="text-4xl p-2 font-bold">{weather.main.temp}°C</p>
 
-            <div className=" border-gray-300 flex mt-5 flex-row justify-center items-center w-full mx-auto p-2 rounded-2xl">
+            <div className=" flex mt-5 flex-row justify-center items-center w-full mx-auto p-2 rounded-2xl">
               {/* Wind Speed */}
               <div className="flex flex-col items-center mx-2">
                 <img
